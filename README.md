@@ -55,3 +55,13 @@
 ## Contributing
 
 Feel free to create an [Issue](https://github.com/prathercc/discrub-ext/issues) if you have any ideas for improvement or notice any bugs that need to addressed.
+
+## Building 
+
+Approximately: `npm install` then `npm run build`; optionally create a zip of `dist`.
+
+With docker:
+- `docker build -t discrub-dev`
+- `docker run --rm -v ./out:/build/out -it discrub-dev`
+
+The extension zip is then built to `out/discrub-dev.zip`.
