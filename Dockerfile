@@ -18,4 +18,4 @@ COPY . .
 
 RUN mkdir -p out
 
-CMD ["bash", "-c", "set -x; pwd; npm run build && pushd dist; zip ../discrub-dev.zip -r . --exclude out/*; popd && cp discrub-dev.zip out/"]
+CMD ["bash", "-c", "set -x -eu; pwd; npm run build; pushd dist; zip ../discrub-dev.zip -r . --exclude out/*; popd; cp discrub-dev.zip out/"]
